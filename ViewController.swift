@@ -30,17 +30,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //pretty obvious. Hides status bar in the app.
     override var prefersStatusBarHidden : Bool {
         return true
     }
     
     
     @IBAction func startButton() {
-        //the double values here are the size of the actual image. We divide by 3 to make the rocket smaller
+        //the values here are the size of the actual image.
         let imageWidth : CGFloat = 1250.0, imageHeight : CGFloat = 1250.0;
     
        
-        //imageHeight + 350 so the image starts below the screen bounds
+        //imageHeight - 1650 so the image starts below the screen bounds
         let imageView = UIImageView(frame: CGRect(x: 0, y: imageHeight - 1650, width: imageWidth, height: imageHeight))
         imageView.center.x = self.view.center.x
         self.view.addSubview(imageView)
@@ -94,6 +95,7 @@ class ViewController: UIViewController {
         let image45 = UIImage.init(named: "exp45.png")
         let image46 = UIImage.init(named: "exp46.png")
         
+        //storing the animation images in our array
         let expArray: [UIImage] = [
             image0!,
             image1!,
